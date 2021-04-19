@@ -19,6 +19,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import {MatFormField, matFormFieldAnimations, MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { DialogComponent } from './components/product-details/dialog/dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +32,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     VirtualTryonComponent,
     HeaderComponent,
     FooterComponent,
+    DialogComponent,
     
   ],
   imports: [
@@ -44,7 +48,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatGridListModule,
     MatCardModule,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

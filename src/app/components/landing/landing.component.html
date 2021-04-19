@@ -9,9 +9,10 @@
 
     <!-- Search Bar | Enter Button -->
     <mat-grid-tile>
-      <mat-form-field color="primary">
+      <mat-form-field color="primary" >
         <mat-label>Search for products</mat-label>
         <input
+        (keydown)="keyDownFunction($event)"
           [(ngModel)]="searched_value"
           matInput
           type="text"

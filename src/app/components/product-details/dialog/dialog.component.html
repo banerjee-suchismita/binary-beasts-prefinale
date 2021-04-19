@@ -1,0 +1,16 @@
+<div mat-dialog-container >
+    <h1 mat-dialog-title class="title">ENTER YOUR DIMENSIONS</h1>
+<div mat-dialog-content>Take a measuring tape and measure the circumference of your head. This will help us suggest
+    the best size for you!</div>
+<mat-form-field>
+    <mat-label>Enter value in cms</mat-label>
+    <input matInput [(ngModel)]="dimension" min="45" max="60" required >
+   
+</mat-form-field>
+<p style="color: red;font-size: x-small;" *ngIf="isError">Please enter a value between 45 and 60</p>
+<div mat-dialog-actions>
+    <button mat-button (click)="submit()">Submit</button>
+    <button mat-button mat-dialog-close>Close</button>
+</div>
+
+</div>
