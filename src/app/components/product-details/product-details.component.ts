@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormValueService } from 'src/app/services/data.service';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from './dialog/dialog.component';
 
 @Component({
   selector: 'app-product-details',
@@ -18,7 +20,8 @@ export class ProductDetailsComponent implements OnInit {
 
   constructor(
     private _snackBar: MatSnackBar,
-    private formValueService: FormValueService
+    private formValueService: FormValueService,
+    public dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
@@ -62,4 +65,19 @@ export class ProductDetailsComponent implements OnInit {
       panelClass: ['snackbar'],
     });
   }
+
+  openDialog() {
+    console.log('open')
+    const dialog_ref = this.dialog.open(DialogComponent,{
+      width: '400px'
+    });
+    dialog_ref.componentInstance.onDataAdd.subscribe(() => {
+      this.dialog.closeAll();
+    });
+  }
+
+  closeDialog(){
+    this.dialog.closeAll();
+  }
+
 }
