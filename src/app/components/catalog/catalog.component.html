@@ -2,14 +2,7 @@
 <!-- Product Catalog | Shown for valid searched keywords-->
 <div
   class="container"
-  *ngIf="
-    searched_value === 'hat' ||
-    searched_value === 'hats' ||
-    searched_value === 'caps' ||
-    searched_value === 'cap' ||
-    searched_value === 'plant' ||
-    searched_value === 'plants'
-  "
+  *ngIf="showCatalog"
 >
   <br /><br /><br />
   <h1>
@@ -17,7 +10,7 @@
   </h1>
 
   <!-- Catalog -->
-  <mat-grid-list cols="3" [gutterSize]="'30px'" rowHeight="51vh">
+  <mat-grid-list cols="2" [gutterSize]="'80px'" rowHeight="51vh">
     <a
       routerLink="/product"
       *ngFor="let product of selectedType.products"
@@ -49,14 +42,7 @@
 <!-- Message displayed when invalid keywords entered -->
 <div
   class="default_msg"
-  *ngIf="
-    searched_value != 'hat' &&
-    searched_value != 'hats' &&
-    searched_value != 'caps' &&
-    searched_value != 'cap' &&
-    searched_value != 'plant' &&
-    searched_value != 'plants'
-  "
+  *ngIf="!showCatalog"
 >
   <h1 class="default_msg">
     Sorry, no records found! Please try 'hats', 'caps', 'plants' :)

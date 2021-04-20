@@ -16,6 +16,8 @@ export class CatalogComponent implements OnInit {
   // the searched keyword
   searched_value: string;
 
+  showCatalog:boolean=false;
+
   constructor(private formValueService: FormValueService) {
     // this.searched_value=''
   }
@@ -23,7 +25,11 @@ export class CatalogComponent implements OnInit {
   ngOnInit(): void {
     // fetching the searched_value from the landing component
     this.searched_value = this.formValueService.searched_value;
-
+    var catagories=['hats' ,'caps' ,'hat' ,'cap','plants' ,'plant','shirts' ,'shirt' ,'tshirt' ,'t-shirt' ,'top' ,'tshirts' ,'t-shirts' ,'tee','frame' ,'photo frame' ,'picture frame' ,'frames' ,'frame set'
+  ];
+    if(catagories.indexOf(this.searched_value)>=0){
+      this.showCatalog=true;
+    }
     // fetching the type of the product
     this.type = this.formValueService.type;
 
@@ -34,6 +40,12 @@ export class CatalogComponent implements OnInit {
       console.log(this.selectedType)
     } else if (this.type === 'plants') {
       this.selectedType = this.formValueService.plant;
+      console.log(this.selectedType.name);
+    }else if (this.type === 'frame') {
+      this.selectedType = this.formValueService.frame;
+      console.log(this.selectedType.name);
+    }else if (this.type === 'shirt') {
+      this.selectedType = this.formValueService.shirt;
       console.log(this.selectedType.name);
     }
   }

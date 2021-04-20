@@ -13,11 +13,14 @@ export class VirtualTryonComponent implements OnInit {
   product_id: string;
   isNavBars: boolean = false;
   showContent: boolean = false;
+  size:number=0;
+  sizeWord:string='';
 
   constructor(private formValueService: FormValueService) {}
 
   ngOnInit(): void {
     this.product_id = this.formValueService.product_id;
+    this.size=this.formValueService.size;
     // fetching the type of the product
     this.type = this.formValueService.type;
 
@@ -26,6 +29,10 @@ export class VirtualTryonComponent implements OnInit {
       this.selectedType = this.formValueService.cap;
     } else if (this.type === 'plants') {
       this.selectedType = this.formValueService.plant;
+    }else if (this.type === 'frame') {
+      this.selectedType = this.formValueService.frame;
+    }else if (this.type === 'shirt') {
+      this.selectedType = this.formValueService.shirt;
     }
 
     if (this.selectedType) {
@@ -38,6 +45,8 @@ export class VirtualTryonComponent implements OnInit {
       this.showContent = true;
     }
     // this.hideNavBar();
+
+    this.sizeWord=["Error","S","M","L"][this.size];
   }
 
   hideNavBar(): void {

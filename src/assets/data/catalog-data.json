@@ -1,19 +1,14 @@
 [
   {
     "name": "Hats",
-    "length": 3,
+    "length": 2,
     "products": [
       {
         "id": "c01",
-        "name": "Black Hat",
+        "name": "Purple Hat",
         "image-src": "../../../assets/c01.jpg",
-        "url": "https://bbinary.8thwall.app/blackhat/",
-        "short_link": "https://8th.io/r3xc6",
         "price": "499 Rs",
         "type": "cap",
-        "reviews": {
-          "fit": 93
-        },
         "isWishList": "0",
         "isCart": "0"
       },
@@ -21,27 +16,8 @@
         "id": "c02",
         "name": "Cowboy Hat",
         "image-src": "../../../assets/c02.jpg",
-        "url": "https://bbinary.8thwall.app/cowboy-hat/",
-        "short_link": "https://8th.io/3c2vp",
         "price": "899 Rs",
         "type": "cap",
-        "reviews": {
-          "fit": 90
-        },
-        "isWishList": "0",
-        "isCart": "0"
-      },
-      {
-        "id": "c03",
-        "name": "Witch Hat",
-        "image-src": "../../../assets/c03.jpg",
-        "url": "https://bbinary.8thwall.app/witch-hat/",
-        "short_link": "https://8th.io/rdj2r",
-        "price": "299 Rs",
-        "type": "cap",
-        "reviews": {
-          "fit": 87
-        },
         "isWishList": "0",
         "isCart": "0"
       }
@@ -49,47 +25,66 @@
   },
   {
     "name": "Plants",
-    "length": 3,
+    "length": 2,
     "products": [
-      {
-        "id": "p01",
-        "name": "Cactus",
-        "image-src": "../../../assets/img/p01.jpg",
-        "url": "https://bbinary.8thwall.app/cactus/",
-        "short_link": "https://8th.io/ufnv2",
-        "price": "499 Rs",
-        "type": "plant",
-        "reviews": {
-          "fit": 0
-        },
-        "isWishList": "0",
-        "isCart": "0"
-      },
       {
         "id": "p02",
         "name": "Green Plant",
         "image-src": "../../../assets/img/p02.jpg",
-        "url": "https://bbinary.8thwall.app/green-plant/",
-        "short_link": "https://8th.io/6bdu6",
         "price": "499 Rs",
         "type": "plant",
-        "reviews": {
-          "fit": 0
-        },
         "isWishList": "0",
-        "isCart": "0"
+        "isCart": "0",
+        "shortLink":"https://8th.io/6bdu6"
       },
       {
         "id": "p03",
         "name": "Potted Plant",
         "image-src": "../../../assets/img/p03.jpg",
-        "url": "https://bbinary.8thwall.app/potted-plant/",
-        "short_link": "https://8th.io/wr3ww",
         "price": "499 Rs",
         "type": "plant",
-        "reviews": {
-          "fit": 0
-        },
+        "isWishList": "0",
+        "isCart": "0",
+        "shortLink":"https://8th.io/wr3ww"
+      }
+    ]
+  },
+  {
+    "name": "Frames",
+    "length": 2,
+    "products": [
+      {
+        "id": "f01",
+        "name": "Modern Picture Frame",
+        "image-src": "../../../assets/f01.jpg",
+        "price": "234 Rs",
+        "type": "frame",
+        "isWishList": "0",
+        "isCart": "0",
+        "shortLink":""
+      },
+      {
+        "id": "f02",
+        "name": "Imperial Vintage Frame",
+        "image-src": "../../../assets/f02.jpg",
+        "price": "899 Rs",
+        "type": "frame",
+        "isWishList": "0",
+        "isCart": "0",
+        "shortLink":""
+      }
+    ]
+  },
+  {
+    "name": "Shirts",
+    "length": 1,
+    "products": [
+      {
+        "id": "s01",
+        "name": "Shirt 1",
+        "image-src": "../../../assets/s01.jpg",
+        "price": "599 Rs",
+        "type": "shirt",
         "isWishList": "0",
         "isCart": "0"
       }

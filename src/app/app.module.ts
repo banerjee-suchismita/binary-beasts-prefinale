@@ -21,6 +21,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { DialogComponent } from './components/product-details/dialog/dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { Dialog1Component } from './components/product-details/dialog1/dialog1.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     HeaderComponent,
     FooterComponent,
     DialogComponent,
+    Dialog1Component,
     
   ],
   imports: [

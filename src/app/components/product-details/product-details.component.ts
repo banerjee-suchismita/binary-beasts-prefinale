@@ -3,6 +3,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormValueService } from 'src/app/services/data.service';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
+import { Dialog1Component } from './dialog1/dialog1.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-details',
@@ -21,7 +23,8 @@ export class ProductDetailsComponent implements OnInit {
   constructor(
     private _snackBar: MatSnackBar,
     private formValueService: FormValueService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private _router: Router
   ) {}
 
   ngOnInit(): void {
@@ -36,6 +39,10 @@ export class ProductDetailsComponent implements OnInit {
       this.selectedType = this.formValueService.cap;
     } else if (this.type === 'plants') {
       this.selectedType = this.formValueService.plant;
+    }else if (this.type === 'frame') {
+      this.selectedType = this.formValueService.frame;
+    }else if (this.type === 'shirt') {
+      this.selectedType = this.formValueService.shirt;
     }
 
     if (this.selectedType) {
@@ -67,13 +74,27 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   openDialog() {
-    console.log('open')
-    const dialog_ref = this.dialog.open(DialogComponent,{
-      width: '400px'
-    });
-    dialog_ref.componentInstance.onDataAdd.subscribe(() => {
-      this.dialog.closeAll();
-    });
+    if(this.type=='plants'||this.type==='frame'){
+      this._router.navigateByUrl('/ar-vr');
+    }
+    else if(this.type=="cap"){
+      console.log('open')
+      const dialog_ref = this.dialog.open(DialogComponent,{
+        width: '400px'
+      });
+      dialog_ref.componentInstance.onDataAdd.subscribe(() => {
+        this.dialog.closeAll();
+      });
+    }    else if(this.type=="shirt"){
+      console.log('open')
+      const dialog_ref = this.dialog.open(Dialog1Component,{
+        width: '400px'
+      });
+      dialog_ref.componentInstance.onDataAdd.subscribe(() => {
+        this.dialog.closeAll();
+      });
+    }
+
   }
 
   closeDialog(){
