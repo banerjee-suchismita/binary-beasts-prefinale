@@ -14,6 +14,7 @@
         <input
           [(ngModel)]="searched_value"
           matInput
+          (keydown.enter)="onKeyDownEvent($event)"
           type="text"
           placeholder="What are you looking for? (Try: 'hats', 'plants')"
         />

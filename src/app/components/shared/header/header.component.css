@@ -9,3 +9,15 @@ mat-toolbar {
 .mat-icon-button {
   cursor: default;
 }
+
+.favorite-icon:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bb {
+  color: white;
+}
