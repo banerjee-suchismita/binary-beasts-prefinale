@@ -81,7 +81,7 @@
     "products": [
       {
         "id": "s01",
-        "name": "Shirt 1",
+        "name": "White T-shirt",
         "image-src": "../../../assets/s01.jpg",
         "price": "599 Rs",
         "type": "shirt",
