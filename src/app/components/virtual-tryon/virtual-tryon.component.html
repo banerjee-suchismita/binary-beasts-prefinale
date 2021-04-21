@@ -1,83 +1,47 @@
 <div *ngIf="showContent">
   <div class="header" *ngIf="selectedType.name === 'Hats'">
     <h3>
-      <b>Size : {{ sizeWord }}</b>
+      <b>Size : {{sizeWord}}</b>
     </h3>
   </div>
 
   <!-- Purple Hat-->
   <div class="content" *ngIf="product_id === 'c01' && size === 1">
-    <iframe
-      src="https://bbinary.8thwall.app/purple-hat-s"
-      allow="camera; microphone"
-      class="frame"
-    ></iframe>
+    <iframe src="https://bbinary.8thwall.app/purple-hat-s" allow="camera; microphone" class="frame"></iframe>
   </div>
 
   <div class="content" *ngIf="product_id === 'c01' && size === 2">
-    <iframe
-      src="https://bbinary.8thwall.app/purple-hat-m"
-      allow="camera; microphone"
-      class="frame"
-    ></iframe>
+    <iframe src="https://bbinary.8thwall.app/purple-hat-m" allow="camera; microphone" class="frame"></iframe>
   </div>
 
   <div class="content" *ngIf="product_id === 'c01' && size === 3">
-    <iframe
-      src="https://bbinary.8thwall.app/purple-hat-l"
-      allow="camera; microphone"
-      class="frame"
-    ></iframe>
+    <iframe src="https://bbinary.8thwall.app/purple-hat-l" allow="camera; microphone" class="frame"></iframe>
   </div>
 
-  <!-- Cowboy Hat-->
-  <div class="content" *ngIf="product_id === 'c02' && size === 1">
-    <iframe
-      src="https://bbinary.8thwall.app/cowboy-hat-s"
-      allow="camera; microphone"
-      class="frame"
-    ></iframe>
-  </div>
+    <!-- Cowboy Hat-->
+    <div class="content" *ngIf="product_id === 'c02' && size === 1">
+      <iframe src="https://bbinary.8thwall.app/cowboy-hat-s" allow="camera; microphone" class="frame"></iframe>
+    </div>
+  
+    <div class="content" *ngIf="product_id === 'c02' && size === 2">
+      <iframe src="https://bbinary.8thwall.app/cowboy-hat-m" allow="camera; microphone" class="frame"></iframe>
+    </div>
+  
+    <div class="content" *ngIf="product_id === 'c02' && size === 3">
+      <iframe src="https://bbinary.8thwall.app/cowboy-hat-l" allow="camera; microphone" class="frame"></iframe>
+    </div>
 
-  <div class="content" *ngIf="product_id === 'c02' && size === 2">
-    <iframe
-      src="https://bbinary.8thwall.app/cowboy-hat-m"
-      allow="camera; microphone"
-      class="frame"
-    ></iframe>
-  </div>
-
-  <div class="content" *ngIf="product_id === 'c02' && size === 3">
-    <iframe
-      src="https://bbinary.8thwall.app/cowboy-hat-l"
-      allow="camera; microphone"
-      class="frame"
-    ></iframe>
-  </div>
-
-  <!-- T shirt 1-->
+      <!-- T shirt-->
   <div class="content" *ngIf="product_id === 't01' && size === 1">
-    <iframe
-      src="bbinary.8thwall.app/tee-shirt-01-s"
-      allow="camera; microphone"
-      class="frame"
-    ></iframe>
+    <iframe src="https://bbinary.8thwall.app/tee-shirt-01-s" allow="camera; microphone" class="frame"></iframe>
   </div>
 
   <div class="content" *ngIf="product_id === 't01' && size === 2">
-    <iframe
-      src="bbinary.8thwall.app/tee-shirt-01-m"
-      allow="camera; microphone"
-      class="frame"
-    ></iframe>
+    <iframe src="https://bbinary.8thwall.app/tee-shirt-01-m" allow="camera; microphone" class="frame"></iframe>
   </div>
 
   <div class="content" *ngIf="product_id === 't01' && size === 3">
-    <iframe
-      src="bbinary.8thwall.app/tee-shirt-01-l"
-      allow="camera; microphone"
-      class="frame"
-    ></iframe>
+    <iframe src="https://bbinary.8thwall.app/tee-shirt-01-l" allow="camera; microphone" class="frame"></iframe>
   </div>
 
   <!-- For Plants | Rear Camera Required -->
@@ -89,23 +53,11 @@
       Please scan the QR code or go to the given link -
     </h1>
     <div class="sub-cont">
-      <img
-        *ngIf="product_id === 'p01'"
-        src="../../../assets/img/cactus.png"
-        class="qr"
-      />
-      <img
-        *ngIf="product_id === 'p02'"
-        src="../../../assets/img/greenplant.png"
-        class="qr"
-      />
-      <img
-        *ngIf="product_id === 'p03'"
-        src="../../../assets/img/pottedplant.png"
-        class="qr"
-      />
+      <img *ngIf="product_id === 'p01'" src="../../../assets/img/cactus.png" class="qr" />
+      <img *ngIf="product_id === 'p02'" src="../../../assets/img/greenplant.png" class="qr" />
+      <img *ngIf="product_id === 'p03'" src="../../../assets/img/pottedplant.png" class="qr" />
       <img src="../../../assets/img/plant_mobile.svg" class="img" />
-      <h3 class="link">{{ product.shortLink }}</h3>
+      <h3 class="link">{{ product.short_link }}</h3>
     </div>
     <app-footer></app-footer>
   </div>
@@ -119,16 +71,8 @@
       Please scan the QR code or go to the given link -
     </h1>
     <div class="sub-cont">
-      <img
-        *ngIf="product_id === 'f01'"
-        src="../../../assets/img/frame1.png"
-        class="qr"
-      />
-      <img
-        *ngIf="product_id === 'f02'"
-        src="../../../assets/img/frame2.png"
-        class="qr"
-      />
+      <img *ngIf="product_id === 'f01'" src="../../../assets/img/frame1.png" class="qr" />
+      <img *ngIf="product_id === 'f02'" src="../../../assets/img/frame2.png" class="qr" />
       <img src="../../../assets/img/plant_mobile.svg" class="img" />
       <h3 class="link">{{ product.short_link }}</h3>
     </div>
@@ -140,14 +84,8 @@
   <app-header></app-header>
   <div class="default_msg">
     <h1 class="default_msg">Sorry, no products found!</h1>
-    <button
-      mat-raised-button
-      class="mi-button"
-      color="primary"
-      routerLink="/home"
-    >
-      Click here to search new products</button
-    ><br />
+    <button mat-raised-button class="mi-button" color="primary" routerLink="/home">
+      Click here to search new products</button><br />
     <img class="sorry-img" src="../../../assets/img/sorry.svg" />
   </div>
   <app-footer></app-footer>
