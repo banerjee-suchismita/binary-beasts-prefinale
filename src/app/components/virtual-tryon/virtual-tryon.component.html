@@ -1,5 +1,5 @@
 <div *ngIf="showContent">
-  <div class="header" *ngIf="selectedType.name === 'Hats'">
+  <div class="header" *ngIf="selectedType.name === 'Hats'||selectedType.name==='Shirts'">
     <h3>
       <b>Size : {{sizeWord}}</b>
     </h3>
@@ -32,15 +32,15 @@
     </div>
 
       <!-- T shirt-->
-  <div class="content" *ngIf="product_id === 't01' && size === 1">
+  <div class="content" *ngIf="product_id === 's01' && size === 1">
     <iframe src="https://bbinary.8thwall.app/tee-shirt-01-s" allow="camera; microphone" class="frame"></iframe>
   </div>
 
-  <div class="content" *ngIf="product_id === 't01' && size === 2">
+  <div class="content" *ngIf="product_id === 's01' && size === 2">
     <iframe src="https://bbinary.8thwall.app/tee-shirt-01-m" allow="camera; microphone" class="frame"></iframe>
   </div>
 
-  <div class="content" *ngIf="product_id === 't01' && size === 3">
+  <div class="content" *ngIf="product_id === 's01' && size === 3">
     <iframe src="https://bbinary.8thwall.app/tee-shirt-01-l" allow="camera; microphone" class="frame"></iframe>
   </div>
 
@@ -57,14 +57,14 @@
       <img *ngIf="product_id === 'p02'" src="../../../assets/img/greenplant.png" class="qr" />
       <img *ngIf="product_id === 'p03'" src="../../../assets/img/pottedplant.png" class="qr" />
       <img src="../../../assets/img/plant_mobile.svg" class="img" />
-      <h3 class="link">{{ product.short_link }}</h3>
+      <h3 class="link">{{ product.shortLink }}</h3>
     </div>
     <app-footer></app-footer>
   </div>
 
   <!-- For Frames | Rear Camera Required -->
 
-  <div class="plant-content" *ngIf="selectedType.name === 'Plants'">
+  <div class="plant-content" *ngIf="selectedType.name === 'Frames'">
     <app-header></app-header>
     <h1 class="plant-header">
       <b>You would require a rear camera for this!</b> <br />
