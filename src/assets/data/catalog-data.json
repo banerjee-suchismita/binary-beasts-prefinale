@@ -55,13 +55,13 @@
     "products": [
       {
         "id": "f01",
-        "name": "Modern Picture Frame",
+        "name": "Modern Wooden Frame",
         "image-src": "../../../assets/f01.jpg",
         "price": "234 Rs",
         "type": "frame",
         "isWishList": "0",
         "isCart": "0",
-        "shortLink":""
+        "shortLink":"https//8th.io/j6zse"
       },
       {
         "id": "f02",
@@ -71,7 +71,7 @@
         "type": "frame",
         "isWishList": "0",
         "isCart": "0",
-        "shortLink":""
+        "shortLink":"https://8th.io/xunxv"
       }
     ]
   },
