@@ -38,14 +38,52 @@
           >
             Add to Cart
           </button>
-          <button
+          <button *ngIf="type==='plants'||type==='frame'"
             mat-raised-button
             class="mi-button"
             color="primary"
-            (click)="openDialog()"
+            (click)="openAR(0)"
           >
             Try it out!
           </button>
+          <button *ngIf="type==='cap'||type==='shirt'"
+          mat-raised-button
+          class="mi-button"
+          color="primary"
+          (click)="openDialog()"
+        >
+          Let us suggest a size for you!
+        </button>
+        <p *ngIf="type==='cap'||type==='shirt'" style="text-align: center;">Or choose one from below!</p>
+        <div style="display: flex;flex-direction: row;" *ngIf="type==='cap'||type==='shirt'">
+          
+          <button 
+          mat-fab
+          class="size-button"
+          color="primary"
+          (click)="openAR(1)"
+        >
+          S
+        </button>
+        <button 
+        mat-fab
+        class="size-button"
+        color="primary"
+        (click)="openAR(2)"
+      >
+        M
+      </button>
+      <button
+      mat-fab
+      class="size-button"
+      color="primary"
+      (click)="openAR(3)"
+    >
+      L
+    </button>
+
+        </div>
+
         </div>
       </mat-grid-tile>
     </mat-grid-list>

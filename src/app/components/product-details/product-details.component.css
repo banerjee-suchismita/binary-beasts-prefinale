@@ -20,6 +20,12 @@
   margin-bottom: 10vh;
   width: 20vw;
 }
+.size-button {
+  display: block;
+  margin-bottom: 3vh;
+  /* width: 5vw; */
+  margin-right: 2vw;
+}
 
 .footer {
   font-size: 20px;

@@ -74,10 +74,7 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   openDialog() {
-    if(this.type=='plants'||this.type==='frame'){
-      this._router.navigateByUrl('/ar-vr');
-    }
-    else if(this.type=="cap"){
+ if(this.type=="cap"){
       console.log('open')
       const dialog_ref = this.dialog.open(DialogComponent,{
         width: '400px'
@@ -99,6 +96,11 @@ export class ProductDetailsComponent implements OnInit {
 
   closeDialog(){
     this.dialog.closeAll();
+  }
+
+  openAR(value:number){
+      this.formValueService.setSize(value);
+      this._router.navigateByUrl('/ar-vr');
   }
 
 }
